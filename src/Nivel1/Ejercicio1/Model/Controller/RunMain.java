@@ -1,4 +1,6 @@
-package Nivel1.Ejercicio1.Model;
+package Nivel1.Ejercicio1.Model.Controller;
+
+import Nivel1.Ejercicio1.Model.Month;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -47,7 +49,7 @@ public class RunMain {
 
         HashSet<Month> monthSet = new HashSet<>(months);
 
-        //Creado el Hash este Agosto no se crea en el mismo, pero si en el Array
+        //Creado el Hash, este Agosto no se crea en el mismo, pero si en el Array
 
         months.add(7, new Month("Agosto"));
 

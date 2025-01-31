@@ -1,4 +1,4 @@
-package Nivel1.Ejercicio2.Model;
+package Nivel1.Ejercicio2.Controller;
 
 import java.util.*;
 
@@ -18,7 +18,7 @@ public class RunMain {
         //Colocamos el iterator al final con list1.size()
         ListIterator<Integer> iterator = list1.listIterator(list1.size());
 
-        //usamos hasPrevious para comprobar que hay un elemento, y previous para moverlo.
+        //usamos hasPrevious para comprobar que hay un elemento anterior, y previous para moverlo.
         while (iterator.hasPrevious()){
             list2.add(iterator.previous());
         }
