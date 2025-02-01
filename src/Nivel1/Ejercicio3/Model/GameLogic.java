@@ -10,11 +10,14 @@ public class GameLogic {
     private int score;
     private static final Scanner sc = new Scanner(System.in);
 
+    //Constructor
     public GameLogic() {
         countriesMap = new HashMap<>();
         score = 0;
     }
 
+    //Leemos el archivo countries que hemos guardado en resources, y lo almacenamos en el HashMap como parejas de
+    //país y capital.
     private void loadCountries() {
         try (InputStream inputStream = getClass().getClassLoader().getResourceAsStream("Nivel1/Ejercicio3/resources/countries.txt");
              BufferedReader br = new BufferedReader(new InputStreamReader(inputStream))) {
