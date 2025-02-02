@@ -1,10 +1,11 @@
 package Nivel2.Ejercicio2.Model;
 
 import Nivel2.Ejercicio1.Entities.Restaurant;
+import Nivel2.Ejercicio2.Controller.StartMain;
 
 import java.util.Comparator;
 
-public abstract class RestaurantComparator implements Comparator<Restaurant> {
+public class RestaurantComparator implements Comparator<Restaurant> {
 
     @Override
     public int compare(Restaurant r1, Restaurant r2) {
