@@ -5,8 +5,8 @@ import Nivel2.Ejercicio1.Entities.Restaurant;
 import java.util.*;
 
 public class RunMain {
+        public static final HashSet<Restaurant> restaurants = new HashSet<>();
     public static void run() {
-        HashSet<Restaurant> restaurants = new HashSet<>();
 
         Restaurant r1 = new Restaurant("restaurante 1", 9);
         Restaurant r2 = new Restaurant("restaurante 2", 8);
