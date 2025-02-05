@@ -19,8 +19,12 @@ public class GameLogic {
     //Leemos el archivo countries que hemos guardado en resources, y lo almacenamos en el HashMap como parejas de
     //país y capital.
     private void loadCountries() {
-        try (InputStream inputStream = getClass().getClassLoader().getResourceAsStream("Nivel1/Ejercicio3/resources/countries.txt");
-             BufferedReader br = new BufferedReader(new InputStreamReader(inputStream))) {
+        InputStream inputStream = getClass().getClassLoader().getResourceAsStream("Nivel1/Ejercicio3/resources/countries.txt");
+            if(inputStream == null) {
+            System.err.println("Error: No se encontró el archivo countries.txt");
+            return;
+        }
+             try( BufferedReader br = new BufferedReader(new InputStreamReader(inputStream))){
             String line;
             while ((line = br.readLine()) != null) {
                 int firstSpaceIndex = line.indexOf(" ");
@@ -30,7 +34,7 @@ public class GameLogic {
                     countriesMap.put(country, capital);
                 }
             }
-        } catch (IOException e) {
+        } catch(IOException e){
             System.out.println("Error de lectura de archivo" + e.getMessage());
         }
     }
@@ -65,10 +69,7 @@ public class GameLogic {
     }
 
     private String normalizeText(String text) {
-        return text.replace("_", "")
-                .replace("-", "")
-                .replace(" " , "")
-                .toUpperCase();
+        return text.replace("_", "").replace("-", "").replace(" ", "").toUpperCase();
     }
 
     private void saveScore() {
