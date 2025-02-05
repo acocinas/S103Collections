@@ -23,7 +23,7 @@ public class RunMain {
         months.add(new Month("Noviembre"));
         months.add(new Month("Diciembre"));
 
-        //imprimimos lo que tenemos antes de añadir Agosto
+        System.out.println("imprimimos el Array antes de añadir Agosto");
         for (Month month : months) {
             System.out.println(month);
         }
@@ -35,8 +35,8 @@ public class RunMain {
         for (Month month : months) {
             System.out.println(month);
         }
-        //duplicamos Agosto para hacer las pruebas
 
+        System.out.println("duplicamos Agosto para hacer las pruebas");
         months.add(7, new Month("Agosto"));
 
         System.out.println();
@@ -49,17 +49,18 @@ public class RunMain {
 
         HashSet<Month> monthSet = new HashSet<>(months);
 
-        //Creado el Hash, este Agosto no se crea en el mismo, pero si en el Array
+        System.out.println("el Hash, este Agosto no se crea en el mismo, pero si en el Array");
 
         months.add(7, new Month("Agosto"));
 
         for (Month month : monthSet) {
             System.out.println(month);
         }
-        //Con el Iterator, vamos a ver la diferencia entre recorrer
-        //el Array y el HashSet.
 
-        System.out.println("\nAhora con iterador recorremos primero el Array y después el HashSet:");
+        System.out.println("Con el Iterator, vamos a ver la diferencia entre recorrer" +
+                " el Array y el HashSet.");
+
+        System.out.println("\nPrimero sale el Array con todos los elementos y después el HashSet sin duplicados:");
 
         Iterator<Month> iterator = months.iterator();
 
